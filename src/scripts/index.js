@@ -1,5 +1,5 @@
 import '../style/style.css';
-// import createCalculator from './components/calculator/calculator.js';
+import createCalculator from './components/calculator/calculator.js';
 
 const body = document.getElementById('body');
-// body.appendChild(createCalculator());
+body.appendChild(createCalculator());

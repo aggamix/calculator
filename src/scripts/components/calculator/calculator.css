@@ -1,0 +1,21 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 50px;
+}
+
+.calculator__light {
+  color: black;
+  border: 5px solid #f1a33b;
+}
+
+.calculator__dark {
+  color: white;
+  background-color: black;
+  border: none;
+}
