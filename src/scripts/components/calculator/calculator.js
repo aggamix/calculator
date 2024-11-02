@@ -6,6 +6,7 @@ import createResultBlock from '../resultBlock/createResultBlock.js';
 const calculatorProps = {
   tag: 'section',
   className: ['calculator', 'calculator__light'],
+  id: 'calculator',
   children: [createResultBlock(), createKeyboard()],
 };
 

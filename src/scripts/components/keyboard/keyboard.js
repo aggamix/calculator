@@ -9,6 +9,7 @@ function getKeyboardChildren() {
 const keyboardProps = {
   tag: 'div',
   className: ['keyboard'],
+  id: 'keyboard',
   children: getKeyboardChildren(),
 };
 

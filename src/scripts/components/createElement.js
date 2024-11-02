@@ -2,6 +2,9 @@ export default function createElement(props) {
   const element = document.createElement(props.tag);
   props.className.forEach((style) => element.classList.add(style));
 
+  if (props.id) {
+    element.id = props.id;
+  }
   if (props.value) {
     element.value = props.value;
   }
