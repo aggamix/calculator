@@ -27,6 +27,19 @@
         ]);
         const s = i;
       },
+      220: (n, t, e) => {
+        e.d(t, { A: () => s });
+        var o = e(601),
+          a = e.n(o),
+          r = e(314),
+          i = e.n(r)()(a());
+        i.push([
+          n.id,
+          '.result_block {\n  flex: 0 0 30%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 10px;\n}\n\n.theme_switcher {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60px;\n  height: 60px;\n  background-color: #f1a33b;\n  border-radius: 50px;\n  border: none;\n  transition: filter 0.4s ease;\n}\n\n.theme_switcher:hover {\n  filter: brightness(1.2);\n}\n\n.result_field {\n  align-self: flex-end;\n  font-size: 4em;\n  margin: unset;\n}\n',
+          '',
+        ]);
+        const s = i;
+      },
       496: (n, t, e) => {
         e.d(t, { A: () => s });
         var o = e(601),
@@ -41,7 +54,7 @@
         const s = i;
       },
       106: (n, t, e) => {
-        e.d(t, { A: () => u });
+        e.d(t, { A: () => c });
         var o = e(601),
           a = e.n(o),
           r = e(314),
@@ -54,7 +67,7 @@
             '#body {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  width: 100vw;\n}\n',
             '',
           ]);
-        const u = l;
+        const c = l;
       },
       314: (n) => {
         n.exports = function (n) {
@@ -88,30 +101,30 @@
                   var l = this[s][0];
                   null != l && (i[l] = !0);
                 }
-              for (var u = 0; u < n.length; u++) {
-                var c = [].concat(n[u]);
-                (o && i[c[0]]) ||
+              for (var c = 0; c < n.length; c++) {
+                var u = [].concat(n[c]);
+                (o && i[u[0]]) ||
                   (void 0 !== r &&
-                    (void 0 === c[5] ||
-                      (c[1] = '@layer'
-                        .concat(c[5].length > 0 ? ' '.concat(c[5]) : '', ' {')
-                        .concat(c[1], '}')),
-                    (c[5] = r)),
+                    (void 0 === u[5] ||
+                      (u[1] = '@layer'
+                        .concat(u[5].length > 0 ? ' '.concat(u[5]) : '', ' {')
+                        .concat(u[1], '}')),
+                    (u[5] = r)),
                   e &&
-                    (c[2]
-                      ? ((c[1] = '@media '
-                          .concat(c[2], ' {')
-                          .concat(c[1], '}')),
-                        (c[2] = e))
-                      : (c[2] = e)),
+                    (u[2]
+                      ? ((u[1] = '@media '
+                          .concat(u[2], ' {')
+                          .concat(u[1], '}')),
+                        (u[2] = e))
+                      : (u[2] = e)),
                   a &&
-                    (c[4]
-                      ? ((c[1] = '@supports ('
-                          .concat(c[4], ') {')
-                          .concat(c[1], '}')),
-                        (c[4] = a))
-                      : (c[4] = ''.concat(a))),
-                  t.push(c));
+                    (u[4]
+                      ? ((u[1] = '@supports ('
+                          .concat(u[4], ') {')
+                          .concat(u[1], '}')),
+                        (u[4] = a))
+                      : (u[4] = ''.concat(a))),
+                  t.push(u));
               }
             }),
             t
@@ -136,10 +149,10 @@
         function o(n, o) {
           for (var r = {}, i = [], s = 0; s < n.length; s++) {
             var l = n[s],
-              u = o.base ? l[0] + o.base : l[0],
-              c = r[u] || 0,
-              d = ''.concat(u, ' ').concat(c);
-            r[u] = c + 1;
+              c = o.base ? l[0] + o.base : l[0],
+              u = r[c] || 0,
+              d = ''.concat(c, ' ').concat(u);
+            r[c] = u + 1;
             var b = e(d),
               p = {
                 css: l[1],
@@ -185,9 +198,9 @@
               var s = e(r[i]);
               t[s].references--;
             }
-            for (var l = o(n, a), u = 0; u < r.length; u++) {
-              var c = e(r[u]);
-              0 === t[c].references && (t[c].updater(), t.splice(c, 1));
+            for (var l = o(n, a), c = 0; c < r.length; c++) {
+              var u = e(r[c]);
+              0 === t[u].references && (t[u].updater(), t.splice(u, 1));
             }
             r = l;
           };
@@ -307,8 +320,8 @@
     i = e.n(r),
     s = e(659),
     l = e.n(s),
-    u = e(56),
-    c = e.n(u),
+    c = e(56),
+    u = e.n(c),
     d = e(540),
     b = e.n(d),
     p = e(113),
@@ -316,15 +329,15 @@
     m = e(106),
     h = {};
   (h.styleTagTransform = f()),
-    (h.setAttributes = c()),
+    (h.setAttributes = u()),
     (h.insert = l().bind(null, 'head')),
     (h.domAPI = i()),
     (h.insertStyleElement = b()),
     a()(m.A, h),
     m.A && m.A.locals && m.A.locals;
   var y = e(750),
-    v = {};
-  function g(n) {
+    g = {};
+  function v(n) {
     const t = document.createElement(n.tag);
     return (
       n.className.forEach((n) => t.classList.add(n)),
@@ -336,146 +349,83 @@
       t
     );
   }
-  (v.styleTagTransform = f()),
-    (v.setAttributes = c()),
-    (v.insert = l().bind(null, 'head')),
-    (v.domAPI = i()),
-    (v.insertStyleElement = b()),
-    a()(y.A, v),
+  (g.styleTagTransform = f()),
+    (g.setAttributes = u()),
+    (g.insert = l().bind(null, 'head')),
+    (g.domAPI = i()),
+    (g.insertStyleElement = b()),
+    a()(y.A, g),
     y.A && y.A.locals && y.A.locals;
   var x = e(640),
     k = {};
   (k.styleTagTransform = f()),
-    (k.setAttributes = c()),
+    (k.setAttributes = u()),
     (k.insert = l().bind(null, 'head')),
     (k.domAPI = i()),
     (k.insertStyleElement = b()),
     a()(x.A, k),
     x.A && x.A.locals && x.A.locals;
-  const w = {
+  const A = {
+    tag: 'div',
+    className: ['keyboard'],
+    children: [
+      {
+        tag: 'button',
+        className: ['keyboard_button'],
+        text: 'AC',
+        value: 'AC',
+      },
+      {
+        tag: 'button',
+        className: ['keyboard_button'],
+        text: '+/-',
+        value: '+/-',
+      },
+      { tag: 'button', className: ['keyboard_button'], text: '%', value: '%' },
+      { tag: 'button', className: ['keyboard_button'], text: '÷', value: '÷' },
+      { tag: 'button', className: ['keyboard_button'], text: '7', value: '7' },
+      { tag: 'button', className: ['keyboard_button'], text: '8', value: '8' },
+      { tag: 'button', className: ['keyboard_button'], text: '9', value: '9' },
+      { tag: 'button', className: ['keyboard_button'], text: '×', value: '×' },
+      { tag: 'button', className: ['keyboard_button'], text: '4', value: '4' },
+      { tag: 'button', className: ['keyboard_button'], text: '5', value: '5' },
+      { tag: 'button', className: ['keyboard_button'], text: '6', value: '6' },
+      { tag: 'button', className: ['keyboard_button'], text: '–', value: '–' },
+      { tag: 'button', className: ['keyboard_button'], text: '1', value: '1' },
+      { tag: 'button', className: ['keyboard_button'], text: '2', value: '2' },
+      { tag: 'button', className: ['keyboard_button'], text: '3', value: '3' },
+      { tag: 'button', className: ['keyboard_button'], text: '+', value: '+' },
+      { tag: 'button', className: ['keyboard_button'], text: '0', value: '0' },
+      { tag: 'button', className: ['keyboard_button'], text: ',', value: ',' },
+      { tag: 'button', className: ['keyboard_button'], text: '=', value: '=' },
+    ].map((n) => v(n)),
+  };
+  var w = e(220),
+    _ = {};
+  (_.styleTagTransform = f()),
+    (_.setAttributes = u()),
+    (_.insert = l().bind(null, 'head')),
+    (_.domAPI = i()),
+    (_.insertStyleElement = b()),
+    a()(w.A, _),
+    w.A && w.A.locals && w.A.locals;
+  const N = {
       tag: 'div',
-      className: ['keyboard'],
+      className: ['result_block'],
       children: [
-        {
+        v({
           tag: 'button',
-          className: ['keyboard_button'],
-          text: 'AC',
-          value: 'AC',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '+/-',
-          value: '+/-',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '%',
-          value: '%',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '÷',
-          value: '÷',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '7',
-          value: '7',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '8',
-          value: '8',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '9',
-          value: '9',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '×',
-          value: '×',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '4',
-          value: '4',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '5',
-          value: '5',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '6',
-          value: '6',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '–',
-          value: '–',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '1',
-          value: '1',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '2',
-          value: '2',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '3',
-          value: '3',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '+',
-          value: '+',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '0',
-          value: '0',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: ',',
-          value: ',',
-        },
-        {
-          tag: 'button',
-          className: ['keyboard_button'],
-          text: '=',
-          value: '=',
-        },
-      ].map((n) => g(n)),
+          className: ['theme_switcher'],
+          value: '',
+          text: '',
+        }),
+        v({ tag: 'p', className: ['result_field'], text: '0', value: '0' }),
+      ],
     },
-    A = {
+    z = {
       tag: 'section',
       className: ['calculator', 'calculator__light'],
-      children: [g(w)],
+      children: [v(N), v(A)],
     };
-  document.getElementById('body').appendChild(g(A));
+  document.getElementById('body').appendChild(v(z));
 })();
