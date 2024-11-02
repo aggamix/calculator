@@ -1,3 +1,5 @@
-import style from './style.css';
+// import '../style/style.css';
+// import createCalculator from './components/calculator/calculator.js';
 
-const header = document.getElementById('header');
+const body = document.getElementById('body');
+// body.appendChild(createCalculator());

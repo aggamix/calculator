@@ -4,18 +4,19 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: './src/scripts/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
   devServer: {
-    static: './dist',
+    static: './src',
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Calculator',
       template: './src/index.html',
+      inject: 'body',
     }),
     new ESLintPlugin(),
   ],

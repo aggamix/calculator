@@ -20,11 +20,14 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
     'no-undef': 'warn',
     'no-alert': 'error',
-    'no-console': 'warn',
+    'no-console': 'off',
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': 'warn',
+    'no-unused-expressions': 'off',
+    'import/extensions': 'off',
+    'no-useless-constructor': 'off',
   },
 };
