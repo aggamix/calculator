@@ -1,4 +1,4 @@
-// import '../style/style.css';
+import '../style/style.css';
 // import createCalculator from './components/calculator/calculator.js';
 
 const body = document.getElementById('body');
