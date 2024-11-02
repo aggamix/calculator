@@ -1,107 +1,120 @@
 (() => {
   'use strict';
   var n = {
-      750: (n, e, t) => {
-        t.d(e, { A: () => s });
-        var o = t(601),
-          r = t.n(o),
-          i = t(314),
-          a = t.n(i)()(r());
-        a.push([
+      750: (n, t, e) => {
+        e.d(t, { A: () => s });
+        var o = e(601),
+          a = e.n(o),
+          r = e(314),
+          i = e.n(r)()(a());
+        i.push([
           n.id,
           ".calculator {\n  display: flex;\n  flex-direction: column;\n  height: 600px;\n  width: 300px;\n  padding: 10px;\n  box-sizing: border-box;\n  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n  border-radius: 50px;\n}\n\n.calculator__light {\n  color: black;\n  border: 5px solid #f1a33b;\n}\n\n.calculator__dark {\n  color: white;\n  background-color: black;\n  border: none;\n}\n",
           '',
         ]);
-        const s = a;
+        const s = i;
       },
-      496: (n, e, t) => {
-        t.d(e, { A: () => s });
-        var o = t(601),
-          r = t.n(o),
-          i = t(314),
-          a = t.n(i)()(r());
-        a.push([
+      640: (n, t, e) => {
+        e.d(t, { A: () => s });
+        var o = e(601),
+          a = e.n(o),
+          r = e(314),
+          i = e.n(r)()(a());
+        i.push([
+          n.id,
+          '.keyboard {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  gap: 10px;\n  width: 100%;\n}\n\n.keyboard_button {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60px;\n  height: 60px;\n  font-size: 2em;\n  color: white;\n  background-color: #333333;\n  border: none;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: filter 0.4s ease;\n}\n\n.keyboard button:nth-child(17) {\n  flex: 2;\n  justify-content: start;\n  padding-left: 15px;\n  border-radius: 50px;\n}\n\n.keyboard button:nth-child(1),\n.keyboard button:nth-child(2),\n.keyboard button:nth-child(3) {\n  font-size: 1.5em;\n  color: black;\n  background-color: #a5a5a5;\n}\n\n.keyboard button:nth-child(4),\n.keyboard button:nth-child(8),\n.keyboard button:nth-child(12),\n.keyboard button:nth-child(16),\n.keyboard button:nth-child(19) {\n  font-size: 2.5em;\n  background-color: #f1a33b;\n}\n\n.keyboard_button:hover {\n  filter: brightness(1.4);\n}\n',
+          '',
+        ]);
+        const s = i;
+      },
+      496: (n, t, e) => {
+        e.d(t, { A: () => s });
+        var o = e(601),
+          a = e.n(o),
+          r = e(314),
+          i = e.n(r)()(a());
+        i.push([
           n.id,
           "html {\n  line-height: 1.15;\n  -webkit-text-size-adjust: 100%;\n}\n\nbody {\n  margin: 0;\n}\n\nmain {\n  display: block;\n}\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\nhr {\n  box-sizing: content-box;\n  height: 0;\n  overflow: visible;\n}\n\npre {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\n\na {\n  background-color: transparent;\n}\n\nabbr[title] {\n  border-bottom: none;\n  text-decoration: underline;\n  text-decoration: underline dotted;\n}\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\n\nsmall {\n  font-size: 80%;\n}\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\nimg {\n  border-style: none;\n}\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  font-size: 100%;\n  line-height: 1.15;\n  margin: 0;\n}\n\nbutton,\ninput {\n  overflow: visible;\n}\n\nbutton,\nselect {\n  text-transform: none;\n}\n\nbutton,\n[type='button'],\n[type='reset'],\n[type='submit'] {\n  -webkit-appearance: button;\n}\n\nbutton::-moz-focus-inner,\n[type='button']::-moz-focus-inner,\n[type='reset']::-moz-focus-inner,\n[type='submit']::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\nbutton:-moz-focusring,\n[type='button']:-moz-focusring,\n[type='reset']:-moz-focusring,\n[type='submit']:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\nlegend {\n  box-sizing: border-box;\n  color: inherit;\n  display: table;\n  max-width: 100%;\n  padding: 0;\n  white-space: normal;\n}\n\nprogress {\n  vertical-align: baseline;\n}\n\ntextarea {\n  overflow: auto;\n}\n\n[type='checkbox'],\n[type='radio'] {\n  box-sizing: border-box;\n  padding: 0;\n}\n\n[type='number']::-webkit-inner-spin-button,\n[type='number']::-webkit-outer-spin-button {\n  height: auto;\n}\n\n[type='search'] {\n  -webkit-appearance: textfield;\n  outline-offset: -2px;\n}\n\n[type='search']::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  font: inherit;\n}\n\ndetails {\n  display: block;\n}\n\nsummary {\n  display: list-item;\n}\n\ntemplate {\n  display: none;\n}\n\n[hidden] {\n  display: none;\n}\n",
           '',
         ]);
-        const s = a;
+        const s = i;
       },
-      106: (n, e, t) => {
-        t.d(e, { A: () => l });
-        var o = t(601),
-          r = t.n(o),
-          i = t(314),
-          a = t.n(i),
-          s = t(496),
-          c = a()(r());
-        c.i(s.A),
-          c.push([
+      106: (n, t, e) => {
+        e.d(t, { A: () => u });
+        var o = e(601),
+          a = e.n(o),
+          r = e(314),
+          i = e.n(r),
+          s = e(496),
+          l = i()(a());
+        l.i(s.A),
+          l.push([
             n.id,
             '#body {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  width: 100vw;\n}\n',
             '',
           ]);
-        const l = c;
+        const u = l;
       },
       314: (n) => {
         n.exports = function (n) {
-          var e = [];
+          var t = [];
           return (
-            (e.toString = function () {
-              return this.map(function (e) {
-                var t = '',
-                  o = void 0 !== e[5];
+            (t.toString = function () {
+              return this.map(function (t) {
+                var e = '',
+                  o = void 0 !== t[5];
                 return (
-                  e[4] && (t += '@supports ('.concat(e[4], ') {')),
-                  e[2] && (t += '@media '.concat(e[2], ' {')),
+                  t[4] && (e += '@supports ('.concat(t[4], ') {')),
+                  t[2] && (e += '@media '.concat(t[2], ' {')),
                   o &&
-                    (t += '@layer'.concat(
-                      e[5].length > 0 ? ' '.concat(e[5]) : '',
+                    (e += '@layer'.concat(
+                      t[5].length > 0 ? ' '.concat(t[5]) : '',
                       ' {'
                     )),
-                  (t += n(e)),
-                  o && (t += '}'),
-                  e[2] && (t += '}'),
-                  e[4] && (t += '}'),
-                  t
+                  (e += n(t)),
+                  o && (e += '}'),
+                  t[2] && (e += '}'),
+                  t[4] && (e += '}'),
+                  e
                 );
               }).join('');
             }),
-            (e.i = function (n, t, o, r, i) {
+            (t.i = function (n, e, o, a, r) {
               'string' == typeof n && (n = [[null, n, void 0]]);
-              var a = {};
+              var i = {};
               if (o)
                 for (var s = 0; s < this.length; s++) {
-                  var c = this[s][0];
-                  null != c && (a[c] = !0);
+                  var l = this[s][0];
+                  null != l && (i[l] = !0);
                 }
-              for (var l = 0; l < n.length; l++) {
-                var u = [].concat(n[l]);
-                (o && a[u[0]]) ||
-                  (void 0 !== i &&
-                    (void 0 === u[5] ||
-                      (u[1] = '@layer'
-                        .concat(u[5].length > 0 ? ' '.concat(u[5]) : '', ' {')
-                        .concat(u[1], '}')),
-                    (u[5] = i)),
-                  t &&
-                    (u[2]
-                      ? ((u[1] = '@media '
-                          .concat(u[2], ' {')
-                          .concat(u[1], '}')),
-                        (u[2] = t))
-                      : (u[2] = t)),
-                  r &&
-                    (u[4]
-                      ? ((u[1] = '@supports ('
-                          .concat(u[4], ') {')
-                          .concat(u[1], '}')),
-                        (u[4] = r))
-                      : (u[4] = ''.concat(r))),
-                  e.push(u));
+              for (var u = 0; u < n.length; u++) {
+                var c = [].concat(n[u]);
+                (o && i[c[0]]) ||
+                  (void 0 !== r &&
+                    (void 0 === c[5] ||
+                      (c[1] = '@layer'
+                        .concat(c[5].length > 0 ? ' '.concat(c[5]) : '', ' {')
+                        .concat(c[1], '}')),
+                    (c[5] = r)),
+                  e &&
+                    (c[2]
+                      ? ((c[1] = '@media '
+                          .concat(c[2], ' {')
+                          .concat(c[1], '}')),
+                        (c[2] = e))
+                      : (c[2] = e)),
+                  a &&
+                    (c[4]
+                      ? ((c[1] = '@supports ('
+                          .concat(c[4], ') {')
+                          .concat(c[1], '}')),
+                        (c[4] = a))
+                      : (c[4] = ''.concat(a))),
+                  t.push(c));
               }
             }),
-            e
+            t
           );
         };
       },
@@ -111,229 +124,358 @@
         };
       },
       72: (n) => {
-        var e = [];
-        function t(n) {
-          for (var t = -1, o = 0; o < e.length; o++)
-            if (e[o].identifier === n) {
-              t = o;
+        var t = [];
+        function e(n) {
+          for (var e = -1, o = 0; o < t.length; o++)
+            if (t[o].identifier === n) {
+              e = o;
               break;
             }
-          return t;
+          return e;
         }
         function o(n, o) {
-          for (var i = {}, a = [], s = 0; s < n.length; s++) {
-            var c = n[s],
-              l = o.base ? c[0] + o.base : c[0],
-              u = i[l] || 0,
-              d = ''.concat(l, ' ').concat(u);
-            i[l] = u + 1;
-            var p = t(d),
-              f = {
-                css: c[1],
-                media: c[2],
-                sourceMap: c[3],
-                supports: c[4],
-                layer: c[5],
+          for (var r = {}, i = [], s = 0; s < n.length; s++) {
+            var l = n[s],
+              u = o.base ? l[0] + o.base : l[0],
+              c = r[u] || 0,
+              d = ''.concat(u, ' ').concat(c);
+            r[u] = c + 1;
+            var b = e(d),
+              p = {
+                css: l[1],
+                media: l[2],
+                sourceMap: l[3],
+                supports: l[4],
+                layer: l[5],
               };
-            if (-1 !== p) e[p].references++, e[p].updater(f);
+            if (-1 !== b) t[b].references++, t[b].updater(p);
             else {
-              var m = r(f, o);
+              var f = a(p, o);
               (o.byIndex = s),
-                e.splice(s, 0, { identifier: d, updater: m, references: 1 });
+                t.splice(s, 0, { identifier: d, updater: f, references: 1 });
             }
-            a.push(d);
+            i.push(d);
           }
-          return a;
+          return i;
         }
-        function r(n, e) {
-          var t = e.domAPI(e);
+        function a(n, t) {
+          var e = t.domAPI(t);
           return (
-            t.update(n),
-            function (e) {
-              if (e) {
+            e.update(n),
+            function (t) {
+              if (t) {
                 if (
-                  e.css === n.css &&
-                  e.media === n.media &&
-                  e.sourceMap === n.sourceMap &&
-                  e.supports === n.supports &&
-                  e.layer === n.layer
+                  t.css === n.css &&
+                  t.media === n.media &&
+                  t.sourceMap === n.sourceMap &&
+                  t.supports === n.supports &&
+                  t.layer === n.layer
                 )
                   return;
-                t.update((n = e));
-              } else t.remove();
+                e.update((n = t));
+              } else e.remove();
             }
           );
         }
-        n.exports = function (n, r) {
-          var i = o((n = n || []), (r = r || {}));
+        n.exports = function (n, a) {
+          var r = o((n = n || []), (a = a || {}));
           return function (n) {
             n = n || [];
-            for (var a = 0; a < i.length; a++) {
-              var s = t(i[a]);
-              e[s].references--;
+            for (var i = 0; i < r.length; i++) {
+              var s = e(r[i]);
+              t[s].references--;
             }
-            for (var c = o(n, r), l = 0; l < i.length; l++) {
-              var u = t(i[l]);
-              0 === e[u].references && (e[u].updater(), e.splice(u, 1));
+            for (var l = o(n, a), u = 0; u < r.length; u++) {
+              var c = e(r[u]);
+              0 === t[c].references && (t[c].updater(), t.splice(c, 1));
             }
-            i = c;
+            r = l;
           };
         };
       },
       659: (n) => {
-        var e = {};
-        n.exports = function (n, t) {
+        var t = {};
+        n.exports = function (n, e) {
           var o = (function (n) {
-            if (void 0 === e[n]) {
-              var t = document.querySelector(n);
+            if (void 0 === t[n]) {
+              var e = document.querySelector(n);
               if (
                 window.HTMLIFrameElement &&
-                t instanceof window.HTMLIFrameElement
+                e instanceof window.HTMLIFrameElement
               )
                 try {
-                  t = t.contentDocument.head;
+                  e = e.contentDocument.head;
                 } catch (n) {
-                  t = null;
+                  e = null;
                 }
-              e[n] = t;
+              t[n] = e;
             }
-            return e[n];
+            return t[n];
           })(n);
           if (!o)
             throw new Error(
               "Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid."
             );
-          o.appendChild(t);
+          o.appendChild(e);
         };
       },
       540: (n) => {
         n.exports = function (n) {
-          var e = document.createElement('style');
-          return n.setAttributes(e, n.attributes), n.insert(e, n.options), e;
+          var t = document.createElement('style');
+          return n.setAttributes(t, n.attributes), n.insert(t, n.options), t;
         };
       },
-      56: (n, e, t) => {
+      56: (n, t, e) => {
         n.exports = function (n) {
-          var e = t.nc;
-          e && n.setAttribute('nonce', e);
+          var t = e.nc;
+          t && n.setAttribute('nonce', t);
         };
       },
       825: (n) => {
         n.exports = function (n) {
           if ('undefined' == typeof document)
             return { update: function () {}, remove: function () {} };
-          var e = n.insertStyleElement(n);
+          var t = n.insertStyleElement(n);
           return {
-            update: function (t) {
-              !(function (n, e, t) {
+            update: function (e) {
+              !(function (n, t, e) {
                 var o = '';
-                t.supports && (o += '@supports ('.concat(t.supports, ') {')),
-                  t.media && (o += '@media '.concat(t.media, ' {'));
-                var r = void 0 !== t.layer;
-                r &&
+                e.supports && (o += '@supports ('.concat(e.supports, ') {')),
+                  e.media && (o += '@media '.concat(e.media, ' {'));
+                var a = void 0 !== e.layer;
+                a &&
                   (o += '@layer'.concat(
-                    t.layer.length > 0 ? ' '.concat(t.layer) : '',
+                    e.layer.length > 0 ? ' '.concat(e.layer) : '',
                     ' {'
                   )),
-                  (o += t.css),
-                  r && (o += '}'),
-                  t.media && (o += '}'),
-                  t.supports && (o += '}');
-                var i = t.sourceMap;
-                i &&
+                  (o += e.css),
+                  a && (o += '}'),
+                  e.media && (o += '}'),
+                  e.supports && (o += '}');
+                var r = e.sourceMap;
+                r &&
                   'undefined' != typeof btoa &&
                   (o +=
                     '\n/*# sourceMappingURL=data:application/json;base64,'.concat(
-                      btoa(unescape(encodeURIComponent(JSON.stringify(i)))),
+                      btoa(unescape(encodeURIComponent(JSON.stringify(r)))),
                       ' */'
                     )),
-                  e.styleTagTransform(o, n, e.options);
-              })(e, n, t);
+                  t.styleTagTransform(o, n, t.options);
+              })(t, n, e);
             },
             remove: function () {
               !(function (n) {
                 if (null === n.parentNode) return !1;
                 n.parentNode.removeChild(n);
-              })(e);
+              })(t);
             },
           };
         };
       },
       113: (n) => {
-        n.exports = function (n, e) {
-          if (e.styleSheet) e.styleSheet.cssText = n;
+        n.exports = function (n, t) {
+          if (t.styleSheet) t.styleSheet.cssText = n;
           else {
-            for (; e.firstChild; ) e.removeChild(e.firstChild);
-            e.appendChild(document.createTextNode(n));
+            for (; t.firstChild; ) t.removeChild(t.firstChild);
+            t.appendChild(document.createTextNode(n));
           }
         };
       },
     },
-    e = {};
-  function t(o) {
-    var r = e[o];
-    if (void 0 !== r) return r.exports;
-    var i = (e[o] = { id: o, exports: {} });
-    return n[o](i, i.exports, t), i.exports;
+    t = {};
+  function e(o) {
+    var a = t[o];
+    if (void 0 !== a) return a.exports;
+    var r = (t[o] = { id: o, exports: {} });
+    return n[o](r, r.exports, e), r.exports;
   }
-  (t.n = (n) => {
-    var e = n && n.__esModule ? () => n.default : () => n;
-    return t.d(e, { a: e }), e;
+  (e.n = (n) => {
+    var t = n && n.__esModule ? () => n.default : () => n;
+    return e.d(t, { a: t }), t;
   }),
-    (t.d = (n, e) => {
-      for (var o in e)
-        t.o(e, o) &&
-          !t.o(n, o) &&
-          Object.defineProperty(n, o, { enumerable: !0, get: e[o] });
+    (e.d = (n, t) => {
+      for (var o in t)
+        e.o(t, o) &&
+          !e.o(n, o) &&
+          Object.defineProperty(n, o, { enumerable: !0, get: t[o] });
     }),
-    (t.o = (n, e) => Object.prototype.hasOwnProperty.call(n, e)),
-    (t.nc = void 0);
-  var o = t(72),
-    r = t.n(o),
-    i = t(825),
-    a = t.n(i),
-    s = t(659),
-    c = t.n(s),
-    l = t(56),
-    u = t.n(l),
-    d = t(540),
-    p = t.n(d),
-    f = t(113),
-    m = t.n(f),
-    b = t(106),
+    (e.o = (n, t) => Object.prototype.hasOwnProperty.call(n, t)),
+    (e.nc = void 0);
+  var o = e(72),
+    a = e.n(o),
+    r = e(825),
+    i = e.n(r),
+    s = e(659),
+    l = e.n(s),
+    u = e(56),
+    c = e.n(u),
+    d = e(540),
+    b = e.n(d),
+    p = e(113),
+    f = e.n(p),
+    m = e(106),
     h = {};
-  (h.styleTagTransform = m()),
-    (h.setAttributes = u()),
-    (h.insert = c().bind(null, 'head')),
-    (h.domAPI = a()),
-    (h.insertStyleElement = p()),
-    r()(b.A, h),
-    b.A && b.A.locals && b.A.locals;
-  var y = t(750),
+  (h.styleTagTransform = f()),
+    (h.setAttributes = c()),
+    (h.insert = l().bind(null, 'head')),
+    (h.domAPI = i()),
+    (h.insertStyleElement = b()),
+    a()(m.A, h),
+    m.A && m.A.locals && m.A.locals;
+  var y = e(750),
     v = {};
-  (v.styleTagTransform = m()),
-    (v.setAttributes = u()),
-    (v.insert = c().bind(null, 'head')),
-    (v.domAPI = a()),
-    (v.insertStyleElement = p()),
-    r()(y.A, v),
+  function g(n) {
+    const t = document.createElement(n.tag);
+    return (
+      n.className.forEach((n) => t.classList.add(n)),
+      n.value && (t.value = n.value),
+      n.text && (t.textContent = n.text),
+      n.children &&
+        Array.isArray(n.children) &&
+        n.children.forEach((n) => t.appendChild(n)),
+      t
+    );
+  }
+  (v.styleTagTransform = f()),
+    (v.setAttributes = c()),
+    (v.insert = l().bind(null, 'head')),
+    (v.domAPI = i()),
+    (v.insertStyleElement = b()),
+    a()(y.A, v),
     y.A && y.A.locals && y.A.locals;
-  const g = { tag: 'section', className: ['calculator', 'calculator__light'] };
-  document.getElementById('body').appendChild(
-    (function () {
-      const n = (function (n) {
-        const e = document.createElement(n.tag);
-        return (
-          n.className.forEach((n) => e.classList.add(n)),
-          n.value && (e.value = n.value),
-          n.text && (e.textContent = n.text),
-          n.children &&
-            Array.isArray(n.children) &&
-            n.children.forEach((n) => e.appendChild(n)),
-          e
-        );
-      })(g);
-      return n;
-    })()
-  );
+  var x = e(640),
+    k = {};
+  (k.styleTagTransform = f()),
+    (k.setAttributes = c()),
+    (k.insert = l().bind(null, 'head')),
+    (k.domAPI = i()),
+    (k.insertStyleElement = b()),
+    a()(x.A, k),
+    x.A && x.A.locals && x.A.locals;
+  const w = {
+      tag: 'div',
+      className: ['keyboard'],
+      children: [
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: 'AC',
+          value: 'AC',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '+/-',
+          value: '+/-',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '%',
+          value: '%',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '÷',
+          value: '÷',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '7',
+          value: '7',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '8',
+          value: '8',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '9',
+          value: '9',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '×',
+          value: '×',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '4',
+          value: '4',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '5',
+          value: '5',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '6',
+          value: '6',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '–',
+          value: '–',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '1',
+          value: '1',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '2',
+          value: '2',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '3',
+          value: '3',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '+',
+          value: '+',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '0',
+          value: '0',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: ',',
+          value: ',',
+        },
+        {
+          tag: 'button',
+          className: ['keyboard_button'],
+          text: '=',
+          value: '=',
+        },
+      ].map((n) => g(n)),
+    },
+    A = {
+      tag: 'section',
+      className: ['calculator', 'calculator__light'],
+      children: [g(w)],
+    };
+  document.getElementById('body').appendChild(g(A));
 })();

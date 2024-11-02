@@ -1,0 +1,50 @@
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.keyboard_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 2em;
+  color: white;
+  background-color: #333333;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: filter 0.4s ease;
+}
+
+.keyboard button:nth-child(17) {
+  flex: 2;
+  justify-content: start;
+  padding-left: 15px;
+  border-radius: 50px;
+}
+
+.keyboard button:nth-child(1),
+.keyboard button:nth-child(2),
+.keyboard button:nth-child(3) {
+  font-size: 1.5em;
+  color: black;
+  background-color: #a5a5a5;
+}
+
+.keyboard button:nth-child(4),
+.keyboard button:nth-child(8),
+.keyboard button:nth-child(12),
+.keyboard button:nth-child(16),
+.keyboard button:nth-child(19) {
+  font-size: 2.5em;
+  background-color: #f1a33b;
+}
+
+.keyboard_button:hover {
+  filter: brightness(1.4);
+}

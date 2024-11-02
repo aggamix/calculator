@@ -1,12 +1,12 @@
 import './calculator.css';
 import createElement from '../createElement.js';
-// import createKeyboard from '../keyboard/keyboard.js';
+import createKeyboard from '../keyboard/keyboard.js';
 // import createResultBlock from '../resultBlock/createResultBlock.js';
 
 const calculatorProps = {
   tag: 'section',
   className: ['calculator', 'calculator__light'],
-  // children: [createResultBlock(), createKeyboard()],
+  children: [createKeyboard()],
 };
 
 export default function createCalculator() {
