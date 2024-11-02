@@ -1,5 +1,5 @@
 import createElement from '../createElement.js';
-// import changeTheme from './changeTheme.js';
+import changeTheme from './changeTheme.js';
 
 const switcherProps = {
   tag: 'button',
@@ -9,7 +9,7 @@ const switcherProps = {
 
 export default function createThemeSwitcher() {
   const switcher = createElement(switcherProps);
-  // switcher.addEventListener('click', (event) => changeTheme(event));
+  switcher.addEventListener('click', (event) => changeTheme(event));
 
   return switcher;
 }
