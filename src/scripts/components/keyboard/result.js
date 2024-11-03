@@ -9,6 +9,10 @@ function getCalculations() {
   if (sign === '+') {
     return previousValue + currentValue;
   }
+  // subtraction
+  if (sign === '–') {
+    return previousValue - currentValue;
+  }
   return result;
 }
 
@@ -45,6 +49,17 @@ export default function getResult(value) {
         previousValue = currentValue;
       }
       sign = '+';
+      resultField.textContent = '0';
+      currentValue = 0;
+    }
+    // processing of pressing "-"
+    if (value === '–') {
+      if (sign === '–') {
+        previousValue -= currentValue;
+      } else {
+        previousValue = currentValue;
+      }
+      sign = '–';
       resultField.textContent = '0';
       currentValue = 0;
     }
