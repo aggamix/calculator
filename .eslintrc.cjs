@@ -28,6 +28,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 'warn',
     'no-unused-expressions': 'off',
     'import/extensions': 'off',
-    'no-useless-constructor': 'off',
+    'no-use-before-define': 'error',
   },
 };
