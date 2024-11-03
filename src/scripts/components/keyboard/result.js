@@ -85,6 +85,12 @@ export default function getResult(value) {
       resultField.textContent = '0';
       currentValue = 0;
     }
+    // processing of pressing "%"
+    if (value === '%') {
+      result = currentValue / 100;
+      resultField.textContent = result;
+      currentValue = result;
+    }
     // getting the result and processing of pressing "="
     if (value === '=') {
       result = getCalculations();
