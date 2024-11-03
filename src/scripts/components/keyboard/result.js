@@ -91,6 +91,11 @@ export default function getResult(value) {
       resultField.textContent = result;
       currentValue = result;
     }
+    // processing of pressing "+/-"
+    if (value === '+/-') {
+      resultField.textContent *= -1;
+      currentValue = +resultField.textContent;
+    }
     // getting the result and processing of pressing "="
     if (value === '=') {
       result = getCalculations();

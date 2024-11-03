@@ -506,6 +506,7 @@
                   (t.textContent = '0'),
                   (w = 0)),
                 '%' === n && ((A = w / 100), (t.textContent = A), (w = A)),
+                '+/-' === n && ((t.textContent *= -1), (w = +t.textContent)),
                 '=' === n &&
                   ((A =
                     '+' === C
