@@ -40,7 +40,7 @@
           d = l()(c);
         u.push([
           n.id,
-          `.result_block {\n  flex: 0 0 30%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 10px;\n}\n\n.theme_switcher {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60px;\n  height: 60px;\n  background-color: #f1a33b;\n  border-radius: 50px;\n  border: none;\n  transition: filter 0.4s ease;\n  background-image: url(${d});\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: background-color 0.5s ease-in;\n}\n\n.theme_switcher:hover {\n  filter: brightness(1.2);\n}\n\n.theme_switcher-logo_light {\n}\n\n.result_field {\n  align-self: flex-end;\n  font-size: 4em;\n  margin: unset;\n}\n`,
+          `.result_block {\n  flex: 0 0 30%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 10px;\n  overflow-x: hidden;\n}\n\n.theme_switcher {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60px;\n  height: 60px;\n  background-color: #f1a33b;\n  border-radius: 50px;\n  border: none;\n  transition: filter 0.4s ease;\n  background-image: url(${d});\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: background-color 0.5s ease-in;\n}\n\n.theme_switcher:hover {\n  filter: brightness(1.2);\n}\n\n.theme_switcher-logo_light {\n}\n\n.result_field {\n  align-self: flex-end;\n  font-size: 4em;\n  margin: unset;\n}\n`,
           '',
         ]);
         const b = u;
@@ -432,8 +432,8 @@
   let _ = 0,
     w = 0,
     A = 0,
-    N = '';
-  const C = {
+    C = '';
+  const N = {
     tag: 'div',
     className: ['keyboard'],
     id: 'keyboard',
@@ -477,7 +477,7 @@
               e = document.getElementById('btn_AC');
             if (e.value === n)
               return (
-                (t.textContent = '0'), (A = 0), (_ = 0), (w = 0), void (N = '')
+                (t.textContent = '0'), (A = 0), (_ = 0), (w = 0), void (C = '')
               );
             'number' == typeof n &&
               ('0' === t.textContent && (t.textContent = ''),
@@ -486,37 +486,44 @@
               'number' != typeof n &&
                 n !== e.value &&
                 ('+' === n &&
-                  ('+' === N ? (_ += w) : (_ = w),
-                  (N = '+'),
+                  ('+' === C ? (_ += w) : (_ = w),
+                  (C = '+'),
                   (t.textContent = '0'),
                   (w = 0)),
                 '–' === n &&
-                  ('–' === N ? (_ -= w) : (_ = w),
-                  (N = '–'),
+                  ('–' === C ? (_ -= w) : (_ = w),
+                  (C = '–'),
                   (t.textContent = '0'),
                   (w = 0)),
                 '×' === n &&
-                  ('x' === N && 0 !== _ ? (_ *= w) : (_ = w),
-                  (N = 'x'),
+                  ('x' === C && 0 !== _ ? (_ *= w) : (_ = w),
+                  (C = 'x'),
+                  (t.textContent = '0'),
+                  (w = 0)),
+                '÷' === n &&
+                  ('/' === C && 0 !== _ ? (_ /= w) : (_ = w),
+                  (C = '/'),
                   (t.textContent = '0'),
                   (w = 0)),
                 '=' === n &&
                   ((A =
-                    '+' === N
+                    '+' === C
                       ? _ + w
-                      : '–' === N
+                      : '–' === C
                         ? _ - w
-                        : 'x' === N
+                        : 'x' === C
                           ? _ * w
-                          : A),
+                          : '/' === C
+                            ? _ / w
+                            : A),
                   (t.textContent = A),
                   (w = A),
                   (_ = 0),
-                  (N = '')),
+                  (C = '')),
                 console.log(`Prev: ${_}`),
                 console.log(`Cur: ${w}`),
                 console.log(`Res: ${A}`),
-                console.log(`Sign: ${N}`));
+                console.log(`Sign: ${C}`));
           })(n.value)
         ),
         t
@@ -576,7 +583,7 @@
       tag: 'section',
       className: ['calculator', 'calculator__light'],
       id: 'calculator',
-      children: [v(j), v(C)],
+      children: [v(j), v(N)],
     };
   document.getElementById('body').appendChild(v($));
 })();
