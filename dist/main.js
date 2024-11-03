@@ -495,11 +495,24 @@
                   (N = '–'),
                   (t.textContent = '0'),
                   (w = 0)),
+                '×' === n &&
+                  ('x' === N && 0 !== _ ? (_ *= w) : (_ = w),
+                  (N = 'x'),
+                  (t.textContent = '0'),
+                  (w = 0)),
                 '=' === n &&
-                  ((A = '+' === N ? _ + w : '–' === N ? _ - w : A),
+                  ((A =
+                    '+' === N
+                      ? _ + w
+                      : '–' === N
+                        ? _ - w
+                        : 'x' === N
+                          ? _ * w
+                          : A),
                   (t.textContent = A),
                   (w = A),
-                  (_ = 0)),
+                  (_ = 0),
+                  (N = '')),
                 console.log(`Prev: ${_}`),
                 console.log(`Cur: ${w}`),
                 console.log(`Res: ${A}`),

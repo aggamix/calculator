@@ -6,13 +6,11 @@ let sign = '';
 // create a separate function to calculate the results
 function getCalculations() {
   // addition
-  if (sign === '+') {
-    return previousValue + currentValue;
-  }
+  if (sign === '+') return previousValue + currentValue;
   // subtraction
-  if (sign === '–') {
-    return previousValue - currentValue;
-  }
+  if (sign === '–') return previousValue - currentValue;
+  // multiplication
+  if (sign === 'x') return previousValue * currentValue;
   return result;
 }
 
@@ -63,12 +61,24 @@ export default function getResult(value) {
       resultField.textContent = '0';
       currentValue = 0;
     }
+    // processing of pressing "x"
+    if (value === '×') {
+      if (sign === 'x' && previousValue !== 0) {
+        previousValue *= currentValue;
+      } else {
+        previousValue = currentValue;
+      }
+      sign = 'x';
+      resultField.textContent = '0';
+      currentValue = 0;
+    }
     // getting the result and processing of pressing "="
     if (value === '=') {
       result = getCalculations();
       resultField.textContent = result;
       currentValue = result;
       previousValue = 0;
+      sign = '';
     }
     console.log(`Prev: ${previousValue}`);
     console.log(`Cur: ${currentValue}`);
