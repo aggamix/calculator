@@ -429,7 +429,11 @@
     (k.insertStyleElement = b()),
     a()(x.A, k),
     x.A && x.A.locals && x.A.locals;
-  const w = {
+  let _ = 0,
+    w = 0,
+    A = 0,
+    N = '';
+  const C = {
     tag: 'div',
     className: ['keyboard'],
     id: 'keyboard',
@@ -437,6 +441,7 @@
       {
         tag: 'button',
         className: ['keyboard_button'],
+        id: 'btn_AC',
         text: 'AC',
         value: 'AC',
       },
@@ -448,42 +453,77 @@
       },
       { tag: 'button', className: ['keyboard_button'], text: '%', value: '%' },
       { tag: 'button', className: ['keyboard_button'], text: '÷', value: '÷' },
-      { tag: 'button', className: ['keyboard_button'], text: '7', value: '7' },
-      { tag: 'button', className: ['keyboard_button'], text: '8', value: '8' },
-      { tag: 'button', className: ['keyboard_button'], text: '9', value: '9' },
+      { tag: 'button', className: ['keyboard_button'], text: '7', value: 7 },
+      { tag: 'button', className: ['keyboard_button'], text: '8', value: 8 },
+      { tag: 'button', className: ['keyboard_button'], text: '9', value: 9 },
       { tag: 'button', className: ['keyboard_button'], text: '×', value: '×' },
-      { tag: 'button', className: ['keyboard_button'], text: '4', value: '4' },
-      { tag: 'button', className: ['keyboard_button'], text: '5', value: '5' },
-      { tag: 'button', className: ['keyboard_button'], text: '6', value: '6' },
+      { tag: 'button', className: ['keyboard_button'], text: '4', value: 4 },
+      { tag: 'button', className: ['keyboard_button'], text: '5', value: 5 },
+      { tag: 'button', className: ['keyboard_button'], text: '6', value: 6 },
       { tag: 'button', className: ['keyboard_button'], text: '–', value: '–' },
-      { tag: 'button', className: ['keyboard_button'], text: '1', value: '1' },
-      { tag: 'button', className: ['keyboard_button'], text: '2', value: '2' },
-      { tag: 'button', className: ['keyboard_button'], text: '3', value: '3' },
+      { tag: 'button', className: ['keyboard_button'], text: '1', value: 1 },
+      { tag: 'button', className: ['keyboard_button'], text: '2', value: 2 },
+      { tag: 'button', className: ['keyboard_button'], text: '3', value: 3 },
       { tag: 'button', className: ['keyboard_button'], text: '+', value: '+' },
-      { tag: 'button', className: ['keyboard_button'], text: '0', value: '0' },
+      { tag: 'button', className: ['keyboard_button'], text: '0', value: 0 },
       { tag: 'button', className: ['keyboard_button'], text: ',', value: ',' },
       { tag: 'button', className: ['keyboard_button'], text: '=', value: '=' },
-    ].map((n) => v(n)),
+    ].map((n) => {
+      const t = v(n);
+      return (
+        t.addEventListener('click', () =>
+          (function (n) {
+            const t = document.getElementById('result_field'),
+              e = document.getElementById('btn_AC');
+            if (e.value === n)
+              return (
+                (t.textContent = '0'), (A = 0), (_ = 0), (w = 0), void (N = '')
+              );
+            'number' == typeof n &&
+              ('0' === t.textContent && (t.textContent = ''),
+              (t.textContent += n),
+              (w = +t.textContent)),
+              'number' != typeof n &&
+                n !== e.value &&
+                ('+' === n &&
+                  ('+' === N ? (_ += w) : (_ = w),
+                  (N = '+'),
+                  (t.textContent = '0'),
+                  (w = 0)),
+                '=' === n &&
+                  ((A = '+' === N ? _ + w : A),
+                  (t.textContent = A),
+                  (w = A),
+                  (_ = 0)),
+                console.log(`Prev: ${_}`),
+                console.log(`Cur: ${w}`),
+                console.log(`Res: ${A}`),
+                console.log(`Sign: ${N}`));
+          })(n.value)
+        ),
+        t
+      );
+    }),
   };
-  var _ = e(220),
-    A = {};
-  (A.styleTagTransform = f()),
-    (A.setAttributes = u()),
-    (A.insert = l().bind(null, 'head')),
-    (A.domAPI = i()),
-    (A.insertStyleElement = b()),
-    a()(_.A, A),
-    _.A && _.A.locals && _.A.locals;
-  var N = e(26);
-  const z = e.p + 'images/moon.935e4e9bf4ad5fe146db.svg',
-    T = { tag: 'button', className: ['theme_switcher'], value: 'light' },
-    C = {
+  var z = e(220),
+    E = {};
+  (E.styleTagTransform = f()),
+    (E.setAttributes = u()),
+    (E.insert = l().bind(null, 'head')),
+    (E.domAPI = i()),
+    (E.insertStyleElement = b()),
+    a()(z.A, E),
+    z.A && z.A.locals && z.A.locals;
+  var T = e(26);
+  const I = e.p + 'images/moon.935e4e9bf4ad5fe146db.svg',
+    S = { tag: 'button', className: ['theme_switcher'], value: 'light' },
+    j = {
       tag: 'div',
       className: ['result_block'],
       id: 'result_block',
       children: [
         (function () {
-          const n = v(T);
+          const n = v(S);
           return (
             n.addEventListener('click', (n) =>
               (function (n) {
@@ -494,11 +534,11 @@
                   o.classList.toggle('calculator__dark'),
                   'light' === t.value
                     ? ((e.style.backgroundColor = '#000000'),
-                      (t.style.backgroundImage = `url(${z})`),
+                      (t.style.backgroundImage = `url(${I})`),
                       (t.style.backgroundColor = '#a5a5a5'),
                       (t.value = 'dark'))
                     : ((e.style.backgroundColor = '#ffffff'),
-                      (t.style.backgroundImage = `url(${N})`),
+                      (t.style.backgroundImage = `url(${T})`),
                       (t.style.backgroundColor = '#f1a33b'),
                       (t.value = 'light'));
               })(n)
@@ -506,14 +546,19 @@
             n
           );
         })(),
-        v({ tag: 'p', className: ['result_field'], text: '0', value: '0' }),
+        v({
+          tag: 'p',
+          className: ['result_field'],
+          id: 'result_field',
+          text: '0',
+        }),
       ],
     },
-    E = {
+    $ = {
       tag: 'section',
       className: ['calculator', 'calculator__light'],
       id: 'calculator',
-      children: [v(C), v(w)],
+      children: [v(j), v(C)],
     };
-  document.getElementById('body').appendChild(v(E));
+  document.getElementById('body').appendChild(v($));
 })();
