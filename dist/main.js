@@ -9,7 +9,7 @@
           i = e.n(r)()(a());
         i.push([
           n.id,
-          ".calculator {\n  display: flex;\n  flex-direction: column;\n  height: 600px;\n  width: 300px;\n  padding: 10px;\n  box-sizing: border-box;\n  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n  border-radius: 50px;\n  border: 5px solid #f1a33b;\n  transition: border-color 0.5s ease-in;\n}\n\n.calculator__light {\n  color: #000000;\n}\n\n.calculator__dark {\n  color: #ffffff;\n  background-color: #000000;\n  border-color: #a5a5a5;\n}\n",
+          ".calculator {\n  display: flex;\n  flex-direction: column;\n  height: 600px;\n  width: 300px;\n  padding: 10px;\n  box-sizing: border-box;\n  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n  font-size: 50px;\n  border-radius: 50px;\n  border: 5px solid #f1a33b;\n  transition: border-color 0.5s ease-in;\n}\n\n.calculator__light {\n  color: #000000;\n}\n\n.calculator__dark {\n  color: #ffffff;\n  background-color: #000000;\n  border-color: #a5a5a5;\n}\n",
           '',
         ]);
         const s = i;
@@ -22,7 +22,7 @@
           i = e.n(r)()(a());
         i.push([
           n.id,
-          '.keyboard {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  gap: 10px;\n  width: 100%;\n}\n\n.keyboard_button {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60px;\n  height: 60px;\n  font-size: 2em;\n  color: white;\n  background-color: #333333;\n  border: none;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: filter 0.4s ease;\n}\n\n.keyboard button:nth-child(17) {\n  flex: 2;\n  justify-content: start;\n  padding-left: 15px;\n  border-radius: 50px;\n}\n\n.keyboard button:nth-child(1),\n.keyboard button:nth-child(2),\n.keyboard button:nth-child(3) {\n  font-size: 1.5em;\n  color: black;\n  background-color: #a5a5a5;\n}\n\n.keyboard button:nth-child(4),\n.keyboard button:nth-child(8),\n.keyboard button:nth-child(12),\n.keyboard button:nth-child(16),\n.keyboard button:nth-child(19) {\n  font-size: 2.5em;\n  background-color: #f1a33b;\n}\n\n.keyboard_button:hover {\n  filter: brightness(1.4);\n}\n',
+          '.keyboard {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  gap: 10px;\n  width: 100%;\n}\n\n.keyboard_button {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60px;\n  height: 60px;\n  font-size: 0.8em;\n  color: white;\n  background-color: #333333;\n  border: none;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: filter 0.4s ease;\n}\n\n.keyboard button:nth-child(17) {\n  flex: 2;\n  justify-content: start;\n  padding-left: 15px;\n  border-radius: 50px;\n}\n\n.keyboard button:nth-child(1),\n.keyboard button:nth-child(2),\n.keyboard button:nth-child(3) {\n  font-size: 0.5em;\n  color: black;\n  background-color: #a5a5a5;\n}\n\n.keyboard button:nth-child(4),\n.keyboard button:nth-child(8),\n.keyboard button:nth-child(12),\n.keyboard button:nth-child(16),\n.keyboard button:nth-child(19) {\n  background-color: #f1a33b;\n}\n\n.keyboard_button:hover {\n  filter: brightness(1.4);\n}\n',
           '',
         ]);
         const s = i;
@@ -40,7 +40,7 @@
           d = l()(c);
         u.push([
           n.id,
-          `.result_block {\n  flex: 0 0 30%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 10px;\n  overflow-x: hidden;\n}\n\n.theme_switcher {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60px;\n  height: 60px;\n  background-color: #f1a33b;\n  border-radius: 50px;\n  border: none;\n  transition: filter 0.4s ease;\n  background-image: url(${d});\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: background-color 0.5s ease-in;\n}\n\n.theme_switcher:hover {\n  filter: brightness(1.2);\n}\n\n.theme_switcher-logo_light {\n}\n\n.result_field {\n  align-self: flex-end;\n  font-size: 4em;\n  margin: unset;\n}\n`,
+          `.result_block {\n  flex: 0 0 30%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  margin: 10px;\n  overflow-x: hidden;\n}\n\n.theme_switcher {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60px;\n  height: 60px;\n  background-color: #f1a33b;\n  border-radius: 50px;\n  border: none;\n  transition: filter 0.4s ease;\n  background-image: url(${d});\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: background-color 0.5s ease-in;\n}\n\n.theme_switcher:hover {\n  filter: brightness(1.2);\n}\n\n.result_field {\n  align-self: flex-end;\n  font-size: 1em;\n  margin: unset;\n}\n`,
           '',
         ]);
         const b = u;
@@ -429,8 +429,8 @@
     (k.insertStyleElement = b()),
     a()(x.A, k),
     x.A && x.A.locals && x.A.locals;
-  let _ = 0,
-    w = 0,
+  let w = 0,
+    _ = 0,
     A = 0,
     N = '';
   const C = {
@@ -476,33 +476,33 @@
             const t = document.getElementById('result_field'),
               e = document.getElementById('btn_AC'),
               o = (n) => {
-                (t.textContent = n), (w = +n);
+                (t.textContent = n), (_ = +n);
               };
             if (e.value === n)
               return (
-                (t.textContent = '0'), (A = 0), (_ = 0), (w = 0), void (N = '')
+                (t.textContent = '0'), (A = 0), (w = 0), (_ = 0), void (N = '')
               );
             'number' == typeof n &&
               ('0' === t.textContent && (t.textContent = ''),
               (t.textContent += n),
-              (w = +t.textContent)),
+              (_ = +t.textContent)),
               'number' != typeof n &&
                 n !== e.value &&
                 ('+' === n &&
-                  ('+' === N ? (_ += w) : (_ = w), (N = '+'), o('0')),
+                  ('+' === N ? (w += _) : (w = _), (N = '+'), o('0')),
                 '–' === n &&
-                  ('–' === N ? (_ -= w) : (_ = w), (N = '–'), o('0')),
+                  ('–' === N ? (w -= _) : (w = _), (N = '–'), o('0')),
                 '×' === n &&
-                  ('x' === N && 0 !== _ ? (_ *= w) : (_ = w),
+                  ('x' === N && 0 !== w ? (w *= _) : (w = _),
                   (N = 'x'),
                   o('0')),
                 '÷' === n &&
-                  ('/' === N && 0 !== _ ? (_ /= w) : (_ = w),
+                  ('/' === N && 0 !== w ? (w /= _) : (w = _),
                   (N = '/'),
                   o('0')),
-                '%' === n && ((A = w / 100), o(A)),
-                '+/-' === n && ((t.textContent *= -1), (w = +t.textContent)),
-                '.' === n && ((t.textContent += '.'), (w = +t.textContent)),
+                '%' === n && ((A = _ / 100), o(A)),
+                '+/-' === n && ((t.textContent *= -1), (_ = +t.textContent)),
+                '.' === n && ((t.textContent += '.'), (_ = +t.textContent)),
                 '=' === n &&
                   ((A = (function (n, t, e, o) {
                     return '+' === n
@@ -514,9 +514,9 @@
                           : '/' === n
                             ? t / e
                             : o;
-                  })(N, _, w, A)),
+                  })(N, w, _, A)),
                   o(A),
-                  (_ = 0),
+                  (w = 0),
                   (N = '')));
           })(n.value)
         ),

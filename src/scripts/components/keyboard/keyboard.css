@@ -12,7 +12,7 @@
   align-items: center;
   width: 60px;
   height: 60px;
-  font-size: 2em;
+  font-size: 0.8em;
   color: white;
   background-color: #333333;
   border: none;
@@ -31,7 +31,7 @@
 .keyboard button:nth-child(1),
 .keyboard button:nth-child(2),
 .keyboard button:nth-child(3) {
-  font-size: 1.5em;
+  font-size: 0.5em;
   color: black;
   background-color: #a5a5a5;
 }
@@ -41,7 +41,6 @@
 .keyboard button:nth-child(12),
 .keyboard button:nth-child(16),
 .keyboard button:nth-child(19) {
-  font-size: 2.5em;
   background-color: #f1a33b;
 }
 

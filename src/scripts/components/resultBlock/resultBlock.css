@@ -28,11 +28,8 @@
   filter: brightness(1.2);
 }
 
-.theme_switcher-logo_light {
-}
-
 .result_field {
   align-self: flex-end;
-  font-size: 4em;
+  font-size: 1em;
   margin: unset;
 }
