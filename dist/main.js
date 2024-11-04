@@ -4,9 +4,9 @@
       750: (n, t, e) => {
         e.d(t, { A: () => s });
         var o = e(601),
-          a = e.n(o),
-          r = e(314),
-          i = e.n(r)()(a());
+          r = e.n(o),
+          a = e(314),
+          i = e.n(a)()(r());
         i.push([
           n.id,
           ".calculator {\n  display: flex;\n  flex-direction: column;\n  height: 600px;\n  width: 300px;\n  padding: 10px;\n  box-sizing: border-box;\n  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n  font-size: 50px;\n  border-radius: 50px;\n  border: 5px solid #f1a33b;\n  transition: border-color 0.5s ease-in;\n}\n\n.calculator__light {\n  color: #000000;\n}\n\n.calculator__dark {\n  color: #ffffff;\n  background-color: #000000;\n  border-color: #a5a5a5;\n}\n",
@@ -17,9 +17,9 @@
       640: (n, t, e) => {
         e.d(t, { A: () => s });
         var o = e(601),
-          a = e.n(o),
-          r = e(314),
-          i = e.n(r)()(a());
+          r = e.n(o),
+          a = e(314),
+          i = e.n(a)()(r());
         i.push([
           n.id,
           '.keyboard {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  gap: 10px;\n  width: 100%;\n}\n\n.keyboard_button {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 60px;\n  height: 60px;\n  font-size: 0.8em;\n  color: white;\n  background-color: #333333;\n  border: none;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: filter 0.4s ease;\n}\n\n.keyboard button:nth-child(17) {\n  flex: 2;\n  justify-content: start;\n  padding-left: 15px;\n  border-radius: 50px;\n}\n\n.keyboard button:nth-child(1),\n.keyboard button:nth-child(2),\n.keyboard button:nth-child(3) {\n  font-size: 0.5em;\n  color: black;\n  background-color: #a5a5a5;\n}\n\n.keyboard button:nth-child(4),\n.keyboard button:nth-child(8),\n.keyboard button:nth-child(12),\n.keyboard button:nth-child(16),\n.keyboard button:nth-child(19) {\n  background-color: #f1a33b;\n}\n\n.keyboard_button:hover {\n  filter: brightness(1.4);\n}\n',
@@ -30,13 +30,13 @@
       220: (n, t, e) => {
         e.d(t, { A: () => b });
         var o = e(601),
-          a = e.n(o),
-          r = e(314),
-          i = e.n(r),
+          r = e.n(o),
+          a = e(314),
+          i = e.n(a),
           s = e(417),
           l = e.n(s),
           c = new URL(e(26), e.b),
-          u = i()(a()),
+          u = i()(r()),
           d = l()(c);
         u.push([
           n.id,
@@ -48,9 +48,9 @@
       496: (n, t, e) => {
         e.d(t, { A: () => s });
         var o = e(601),
-          a = e.n(o),
-          r = e(314),
-          i = e.n(r)()(a());
+          r = e.n(o),
+          a = e(314),
+          i = e.n(a)()(r());
         i.push([
           n.id,
           "html {\n  line-height: 1.15;\n  -webkit-text-size-adjust: 100%;\n}\n\nbody {\n  margin: 0;\n}\n\nmain {\n  display: block;\n}\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\nhr {\n  box-sizing: content-box;\n  height: 0;\n  overflow: visible;\n}\n\npre {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\n\na {\n  background-color: transparent;\n}\n\nabbr[title] {\n  border-bottom: none;\n  text-decoration: underline;\n  text-decoration: underline dotted;\n}\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\n\nsmall {\n  font-size: 80%;\n}\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\nimg {\n  border-style: none;\n}\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  font-size: 100%;\n  line-height: 1.15;\n  margin: 0;\n}\n\nbutton,\ninput {\n  overflow: visible;\n}\n\nbutton,\nselect {\n  text-transform: none;\n}\n\nbutton,\n[type='button'],\n[type='reset'],\n[type='submit'] {\n  -webkit-appearance: button;\n}\n\nbutton::-moz-focus-inner,\n[type='button']::-moz-focus-inner,\n[type='reset']::-moz-focus-inner,\n[type='submit']::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\nbutton:-moz-focusring,\n[type='button']:-moz-focusring,\n[type='reset']:-moz-focusring,\n[type='submit']:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\nlegend {\n  box-sizing: border-box;\n  color: inherit;\n  display: table;\n  max-width: 100%;\n  padding: 0;\n  white-space: normal;\n}\n\nprogress {\n  vertical-align: baseline;\n}\n\ntextarea {\n  overflow: auto;\n}\n\n[type='checkbox'],\n[type='radio'] {\n  box-sizing: border-box;\n  padding: 0;\n}\n\n[type='number']::-webkit-inner-spin-button,\n[type='number']::-webkit-outer-spin-button {\n  height: auto;\n}\n\n[type='search'] {\n  -webkit-appearance: textfield;\n  outline-offset: -2px;\n}\n\n[type='search']::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  font: inherit;\n}\n\ndetails {\n  display: block;\n}\n\nsummary {\n  display: list-item;\n}\n\ntemplate {\n  display: none;\n}\n\n[hidden] {\n  display: none;\n}\n",
@@ -61,11 +61,11 @@
       106: (n, t, e) => {
         e.d(t, { A: () => c });
         var o = e(601),
-          a = e.n(o),
-          r = e(314),
-          i = e.n(r),
+          r = e.n(o),
+          a = e(314),
+          i = e.n(a),
           s = e(496),
-          l = i()(a());
+          l = i()(r());
         l.i(s.A),
           l.push([
             n.id,
@@ -98,7 +98,7 @@
                 );
               }).join('');
             }),
-            (t.i = function (n, e, o, a, r) {
+            (t.i = function (n, e, o, r, a) {
               'string' == typeof n && (n = [[null, n, void 0]]);
               var i = {};
               if (o)
@@ -109,12 +109,12 @@
               for (var c = 0; c < n.length; c++) {
                 var u = [].concat(n[c]);
                 (o && i[u[0]]) ||
-                  (void 0 !== r &&
+                  (void 0 !== a &&
                     (void 0 === u[5] ||
                       (u[1] = '@layer'
                         .concat(u[5].length > 0 ? ' '.concat(u[5]) : '', ' {')
                         .concat(u[1], '}')),
-                    (u[5] = r)),
+                    (u[5] = a)),
                   e &&
                     (u[2]
                       ? ((u[1] = '@media '
@@ -122,13 +122,13 @@
                           .concat(u[1], '}')),
                         (u[2] = e))
                       : (u[2] = e)),
-                  a &&
+                  r &&
                     (u[4]
                       ? ((u[1] = '@supports ('
                           .concat(u[4], ') {')
                           .concat(u[1], '}')),
-                        (u[4] = a))
-                      : (u[4] = ''.concat(a))),
+                        (u[4] = r))
+                      : (u[4] = ''.concat(r))),
                   t.push(u));
               }
             }),
@@ -170,12 +170,12 @@
           return e;
         }
         function o(n, o) {
-          for (var r = {}, i = [], s = 0; s < n.length; s++) {
+          for (var a = {}, i = [], s = 0; s < n.length; s++) {
             var l = n[s],
               c = o.base ? l[0] + o.base : l[0],
-              u = r[c] || 0,
+              u = a[c] || 0,
               d = ''.concat(c, ' ').concat(u);
-            r[c] = u + 1;
+            a[c] = u + 1;
             var b = e(d),
               p = {
                 css: l[1],
@@ -186,7 +186,7 @@
               };
             if (-1 !== b) t[b].references++, t[b].updater(p);
             else {
-              var f = a(p, o);
+              var f = r(p, o);
               (o.byIndex = s),
                 t.splice(s, 0, { identifier: d, updater: f, references: 1 });
             }
@@ -194,7 +194,7 @@
           }
           return i;
         }
-        function a(n, t) {
+        function r(n, t) {
           var e = t.domAPI(t);
           return (
             e.update(n),
@@ -213,19 +213,19 @@
             }
           );
         }
-        n.exports = function (n, a) {
-          var r = o((n = n || []), (a = a || {}));
+        n.exports = function (n, r) {
+          var a = o((n = n || []), (r = r || {}));
           return function (n) {
             n = n || [];
-            for (var i = 0; i < r.length; i++) {
-              var s = e(r[i]);
+            for (var i = 0; i < a.length; i++) {
+              var s = e(a[i]);
               t[s].references--;
             }
-            for (var l = o(n, a), c = 0; c < r.length; c++) {
-              var u = e(r[c]);
+            for (var l = o(n, r), c = 0; c < a.length; c++) {
+              var u = e(a[c]);
               0 === t[u].references && (t[u].updater(), t.splice(u, 1));
             }
-            r = l;
+            a = l;
           };
         };
       },
@@ -278,22 +278,22 @@
                 var o = '';
                 e.supports && (o += '@supports ('.concat(e.supports, ') {')),
                   e.media && (o += '@media '.concat(e.media, ' {'));
-                var a = void 0 !== e.layer;
-                a &&
+                var r = void 0 !== e.layer;
+                r &&
                   (o += '@layer'.concat(
                     e.layer.length > 0 ? ' '.concat(e.layer) : '',
                     ' {'
                   )),
                   (o += e.css),
-                  a && (o += '}'),
+                  r && (o += '}'),
                   e.media && (o += '}'),
                   e.supports && (o += '}');
-                var r = e.sourceMap;
-                r &&
+                var a = e.sourceMap;
+                a &&
                   'undefined' != typeof btoa &&
                   (o +=
                     '\n/*# sourceMappingURL=data:application/json;base64,'.concat(
-                      btoa(unescape(encodeURIComponent(JSON.stringify(r)))),
+                      btoa(unescape(encodeURIComponent(JSON.stringify(a)))),
                       ' */'
                     )),
                   t.styleTagTransform(o, n, t.options);
@@ -323,10 +323,10 @@
     },
     t = {};
   function e(o) {
-    var a = t[o];
-    if (void 0 !== a) return a.exports;
-    var r = (t[o] = { id: o, exports: {} });
-    return n[o](r, r.exports, e), r.exports;
+    var r = t[o];
+    if (void 0 !== r) return r.exports;
+    var a = (t[o] = { id: o, exports: {} });
+    return n[o](a, a.exports, e), a.exports;
   }
   (e.m = n),
     (e.n = (n) => {
@@ -362,8 +362,8 @@
       ) {
         var o = t.getElementsByTagName('script');
         if (o.length)
-          for (var a = o.length - 1; a > -1 && (!n || !/^http(s?):/.test(n)); )
-            n = o[a--].src;
+          for (var r = o.length - 1; r > -1 && (!n || !/^http(s?):/.test(n)); )
+            n = o[r--].src;
       }
       if (!n)
         throw new Error(
@@ -378,9 +378,9 @@
     (e.b = document.baseURI || self.location.href),
     (e.nc = void 0);
   var o = e(72),
-    a = e.n(o),
-    r = e(825),
-    i = e.n(r),
+    r = e.n(o),
+    a = e(825),
+    i = e.n(a),
     s = e(659),
     l = e.n(s),
     c = e(56),
@@ -396,7 +396,7 @@
     (g.insert = l().bind(null, 'head')),
     (g.domAPI = i()),
     (g.insertStyleElement = b()),
-    a()(m.A, g),
+    r()(m.A, g),
     m.A && m.A.locals && m.A.locals;
   var h = e(750),
     y = {};
@@ -418,7 +418,7 @@
     (y.insert = l().bind(null, 'head')),
     (y.domAPI = i()),
     (y.insertStyleElement = b()),
-    a()(h.A, y),
+    r()(h.A, y),
     h.A && h.A.locals && h.A.locals;
   var x = e(640),
     k = {};
@@ -427,13 +427,13 @@
     (k.insert = l().bind(null, 'head')),
     (k.domAPI = i()),
     (k.insertStyleElement = b()),
-    a()(x.A, k),
+    r()(x.A, k),
     x.A && x.A.locals && x.A.locals;
   let w = 0,
     _ = 0,
     A = 0,
-    N = '';
-  const C = {
+    C = '';
+  const N = {
     tag: 'div',
     className: ['keyboard'],
     id: 'keyboard',
@@ -480,7 +480,7 @@
               };
             if (e.value === n)
               return (
-                (t.textContent = '0'), (A = 0), (w = 0), (_ = 0), void (N = '')
+                (t.textContent = '0'), (A = 0), (w = 0), (_ = 0), void (C = '')
               );
             'number' == typeof n &&
               ('0' === t.textContent && (t.textContent = ''),
@@ -489,16 +489,16 @@
               'number' != typeof n &&
                 n !== e.value &&
                 ('+' === n &&
-                  ('+' === N ? (w += _) : (w = _), (N = '+'), o('0')),
+                  ('+' === C ? (w += _) : (w = _), (C = '+'), o('0')),
                 '–' === n &&
-                  ('–' === N ? (w -= _) : (w = _), (N = '–'), o('0')),
+                  ('–' === C ? (w -= _) : (w = _), (C = '–'), o('0')),
                 '×' === n &&
-                  ('x' === N && 0 !== w ? (w *= _) : (w = _),
-                  (N = 'x'),
+                  ('x' === C && 0 !== w ? (w *= _) : (w = _),
+                  (C = 'x'),
                   o('0')),
                 '÷' === n &&
-                  ('/' === N && 0 !== w ? (w /= _) : (w = _),
-                  (N = '/'),
+                  ('/' === C && 0 !== w ? (w /= _) : (w = _),
+                  (C = '/'),
                   o('0')),
                 '%' === n && ((A = _ / 100), o(A)),
                 '+/-' === n && ((t.textContent *= -1), (_ = +t.textContent)),
@@ -514,10 +514,22 @@
                           : '/' === n
                             ? t / e
                             : o;
-                  })(N, w, _, A)),
-                  o(A),
+                  })(C, w, _, A)),
+                  console.log(A, C),
+                  (t.textContent = (function (n, t) {
+                    if (n.toString().length <= 9) return n;
+                    if ('x' === t || '+' === t) {
+                      const t = n.toString(),
+                        e = 'e' + (t.length - 1),
+                        o = 9 - e.length,
+                        r = t.substr(0, o);
+                      return `${r.substr(0, 1)},${r.substr(1)}${e}`;
+                    }
+                    return n;
+                  })(A, C)),
+                  (_ = A),
                   (w = 0),
-                  (N = '')));
+                  (C = '')));
           })(n.value)
         ),
         t
@@ -531,7 +543,7 @@
     (E.insert = l().bind(null, 'head')),
     (E.domAPI = i()),
     (E.insertStyleElement = b()),
-    a()(z.A, E),
+    r()(z.A, E),
     z.A && z.A.locals && z.A.locals;
   var T = e(26);
   const I = e.p + 'images/moon.935e4e9bf4ad5fe146db.svg',
@@ -577,7 +589,7 @@
       tag: 'section',
       className: ['calculator', 'calculator__light'],
       id: 'calculator',
-      children: [v(j), v(C)],
+      children: [v(j), v(N)],
     };
   document.getElementById('body').appendChild(v(M));
 })();

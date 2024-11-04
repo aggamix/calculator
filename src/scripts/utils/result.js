@@ -1,4 +1,5 @@
 import getCalculations from './calculations.js';
+import checkResult from './checkingResult.js';
 
 let previousValue = 0;
 let currentValue = 0;
@@ -92,7 +93,9 @@ export default function getResult(value) {
     // getting the result and processing of pressing "="
     if (value === '=') {
       result = getCalculations(sign, previousValue, currentValue, result);
-      updateResultField(result);
+      console.log(result, sign);
+      resultField.textContent = checkResult(result, sign);
+      currentValue = result;
       previousValue = 0;
       sign = '';
     }
