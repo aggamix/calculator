@@ -1,24 +1,17 @@
+import getCalculations from './calculations.js';
+
 let previousValue = 0;
 let currentValue = 0;
 let result = 0;
 let sign = '';
 
-// create a separate function to calculate the results
-function getCalculations() {
-  // addition
-  if (sign === '+') return previousValue + currentValue;
-  // subtraction
-  if (sign === '–') return previousValue - currentValue;
-  // multiplication
-  if (sign === 'x') return previousValue * currentValue;
-  // division
-  if (sign === '/') return previousValue / currentValue;
-  return result;
-}
-
 export default function getResult(value) {
   const resultField = document.getElementById('result_field');
   const buttonAC = document.getElementById('btn_AC');
+  const updateResultField = (newValue) => {
+    resultField.textContent = newValue;
+    currentValue = +newValue;
+  };
 
   // checking the 'AC' button press, clearing the calculator
   if (buttonAC.value === value) {
@@ -49,8 +42,7 @@ export default function getResult(value) {
         previousValue = currentValue;
       }
       sign = '+';
-      resultField.textContent = '0';
-      currentValue = 0;
+      updateResultField('0');
     }
     // processing of pressing "-"
     if (value === '–') {
@@ -60,8 +52,7 @@ export default function getResult(value) {
         previousValue = currentValue;
       }
       sign = '–';
-      resultField.textContent = '0';
-      currentValue = 0;
+      updateResultField('0');
     }
     // processing of pressing "x"
     if (value === '×') {
@@ -71,8 +62,7 @@ export default function getResult(value) {
         previousValue = currentValue;
       }
       sign = 'x';
-      resultField.textContent = '0';
-      currentValue = 0;
+      updateResultField('0');
     }
     // processing of pressing "÷"
     if (value === '÷') {
@@ -82,14 +72,12 @@ export default function getResult(value) {
         previousValue = currentValue;
       }
       sign = '/';
-      resultField.textContent = '0';
-      currentValue = 0;
+      updateResultField('0');
     }
     // processing of pressing "%"
     if (value === '%') {
       result = currentValue / 100;
-      resultField.textContent = result;
-      currentValue = result;
+      updateResultField(result);
     }
     // processing of pressing "+/-"
     if (value === '+/-') {
@@ -98,15 +86,10 @@ export default function getResult(value) {
     }
     // getting the result and processing of pressing "="
     if (value === '=') {
-      result = getCalculations();
-      resultField.textContent = result;
-      currentValue = result;
+      result = getCalculations(sign, previousValue, currentValue, result);
+      updateResultField(result);
       previousValue = 0;
       sign = '';
     }
-    console.log(`Prev: ${previousValue}`);
-    console.log(`Cur: ${currentValue}`);
-    console.log(`Res: ${result}`);
-    console.log(`Sign: ${sign}`);
   }
 }

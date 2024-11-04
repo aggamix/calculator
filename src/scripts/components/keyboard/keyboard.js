@@ -1,7 +1,7 @@
 import './keyboard.css';
-import createElement from '../createElement.js';
-import buttonsConfigs from './buttonsConfig.js';
-import getResult from './result.js';
+import createElement from '../../utils/createElement.js';
+import buttonsConfigs from '../../utils/buttonsConfig.js';
+import getResult from '../../utils/result.js';
 
 function getKeyboardChildren() {
   return buttonsConfigs.map((child) => {

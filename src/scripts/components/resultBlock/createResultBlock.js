@@ -1,5 +1,5 @@
 import './resultBlock.css';
-import createElement from '../createElement.js';
+import createElement from '../../utils/createElement.js';
 import createThemeSwitcher from './themeSwitcher.js';
 import createResultField from './createResultField.js';
 

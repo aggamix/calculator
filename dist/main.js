@@ -432,8 +432,8 @@
   let _ = 0,
     w = 0,
     A = 0,
-    C = '';
-  const N = {
+    N = '';
+  const C = {
     tag: 'div',
     className: ['keyboard'],
     id: 'keyboard',
@@ -474,10 +474,13 @@
         t.addEventListener('click', () =>
           (function (n) {
             const t = document.getElementById('result_field'),
-              e = document.getElementById('btn_AC');
+              e = document.getElementById('btn_AC'),
+              o = (n) => {
+                (t.textContent = n), (w = +n);
+              };
             if (e.value === n)
               return (
-                (t.textContent = '0'), (A = 0), (_ = 0), (w = 0), void (C = '')
+                (t.textContent = '0'), (A = 0), (_ = 0), (w = 0), void (N = '')
               );
             'number' == typeof n &&
               ('0' === t.textContent && (t.textContent = ''),
@@ -486,46 +489,34 @@
               'number' != typeof n &&
                 n !== e.value &&
                 ('+' === n &&
-                  ('+' === C ? (_ += w) : (_ = w),
-                  (C = '+'),
-                  (t.textContent = '0'),
-                  (w = 0)),
+                  ('+' === N ? (_ += w) : (_ = w), (N = '+'), o('0')),
                 '–' === n &&
-                  ('–' === C ? (_ -= w) : (_ = w),
-                  (C = '–'),
-                  (t.textContent = '0'),
-                  (w = 0)),
+                  ('–' === N ? (_ -= w) : (_ = w), (N = '–'), o('0')),
                 '×' === n &&
-                  ('x' === C && 0 !== _ ? (_ *= w) : (_ = w),
-                  (C = 'x'),
-                  (t.textContent = '0'),
-                  (w = 0)),
+                  ('x' === N && 0 !== _ ? (_ *= w) : (_ = w),
+                  (N = 'x'),
+                  o('0')),
                 '÷' === n &&
-                  ('/' === C && 0 !== _ ? (_ /= w) : (_ = w),
-                  (C = '/'),
-                  (t.textContent = '0'),
-                  (w = 0)),
-                '%' === n && ((A = w / 100), (t.textContent = A), (w = A)),
+                  ('/' === N && 0 !== _ ? (_ /= w) : (_ = w),
+                  (N = '/'),
+                  o('0')),
+                '%' === n && ((A = w / 100), o(A)),
                 '+/-' === n && ((t.textContent *= -1), (w = +t.textContent)),
                 '=' === n &&
-                  ((A =
-                    '+' === C
-                      ? _ + w
-                      : '–' === C
-                        ? _ - w
-                        : 'x' === C
-                          ? _ * w
-                          : '/' === C
-                            ? _ / w
-                            : A),
-                  (t.textContent = A),
-                  (w = A),
+                  ((A = (function (n, t, e, o) {
+                    return '+' === n
+                      ? t + e
+                      : '–' === n
+                        ? t - e
+                        : 'x' === n
+                          ? t * e
+                          : '/' === n
+                            ? t / e
+                            : o;
+                  })(N, _, w, A)),
+                  o(A),
                   (_ = 0),
-                  (C = '')),
-                console.log(`Prev: ${_}`),
-                console.log(`Cur: ${w}`),
-                console.log(`Res: ${A}`),
-                console.log(`Sign: ${C}`));
+                  (N = '')));
           })(n.value)
         ),
         t
@@ -581,11 +572,11 @@
         }),
       ],
     },
-    $ = {
+    M = {
       tag: 'section',
       className: ['calculator', 'calculator__light'],
       id: 'calculator',
-      children: [v(j), v(N)],
+      children: [v(j), v(C)],
     };
-  document.getElementById('body').appendChild(v($));
+  document.getElementById('body').appendChild(v(M));
 })();

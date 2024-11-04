@@ -1,5 +1,5 @@
-import createElement from '../createElement.js';
-import changeTheme from './changeTheme.js';
+import createElement from '../../utils/createElement.js';
+import changeTheme from '../../utils/changeTheme.js';
 
 const switcherProps = {
   tag: 'button',

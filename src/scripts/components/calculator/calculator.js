@@ -1,5 +1,5 @@
 import './calculator.css';
-import createElement from '../createElement.js';
+import createElement from '../../utils/createElement.js';
 import createKeyboard from '../keyboard/keyboard.js';
 import createResultBlock from '../resultBlock/createResultBlock.js';
 

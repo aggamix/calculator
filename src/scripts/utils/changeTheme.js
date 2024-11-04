@@ -1,5 +1,5 @@
-import sunImage from '../../../img/sun.svg';
-import moonImage from '../../../img/moon.svg';
+import sunImage from '../../img/sun.svg';
+import moonImage from '../../img/moon.svg';
 
 export default function changeTheme(event) {
   const switcher = event.target;
