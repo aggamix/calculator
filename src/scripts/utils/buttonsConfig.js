@@ -105,8 +105,8 @@ const buttonsConfigs = [
   {
     tag: 'button',
     className: ['keyboard_button'],
-    text: ',',
-    value: ',',
+    text: '.',
+    value: '.',
   },
   {
     tag: 'button',

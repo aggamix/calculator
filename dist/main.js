@@ -466,7 +466,7 @@
       { tag: 'button', className: ['keyboard_button'], text: '3', value: 3 },
       { tag: 'button', className: ['keyboard_button'], text: '+', value: '+' },
       { tag: 'button', className: ['keyboard_button'], text: '0', value: 0 },
-      { tag: 'button', className: ['keyboard_button'], text: ',', value: ',' },
+      { tag: 'button', className: ['keyboard_button'], text: '.', value: '.' },
       { tag: 'button', className: ['keyboard_button'], text: '=', value: '=' },
     ].map((n) => {
       const t = v(n);
@@ -502,6 +502,7 @@
                   o('0')),
                 '%' === n && ((A = w / 100), o(A)),
                 '+/-' === n && ((t.textContent *= -1), (w = +t.textContent)),
+                '.' === n && ((t.textContent += '.'), (w = +t.textContent)),
                 '=' === n &&
                   ((A = (function (n, t, e, o) {
                     return '+' === n

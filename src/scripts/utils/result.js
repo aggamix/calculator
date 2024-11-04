@@ -84,6 +84,11 @@ export default function getResult(value) {
       resultField.textContent *= -1;
       currentValue = +resultField.textContent;
     }
+    // processing of pressing "."
+    if (value === '.') {
+      resultField.textContent += '.';
+      currentValue = +resultField.textContent;
+    }
     // getting the result and processing of pressing "="
     if (value === '=') {
       result = getCalculations(sign, previousValue, currentValue, result);
