@@ -93,7 +93,6 @@ export default function getResult(value) {
     // getting the result and processing of pressing "="
     if (value === '=') {
       result = getCalculations(sign, previousValue, currentValue, result);
-      console.log(result, sign);
       resultField.textContent = checkResult(result, sign);
       currentValue = result;
       previousValue = 0;

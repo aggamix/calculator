@@ -515,17 +515,18 @@
                             ? t / e
                             : o;
                   })(C, w, _, A)),
-                  console.log(A, C),
                   (t.textContent = (function (n, t) {
                     if (n.toString().length <= 9) return n;
-                    if ('x' === t || '+' === t) {
-                      const t = n.toString(),
-                        e = 'e' + (t.length - 1),
-                        o = 9 - e.length,
-                        r = t.substr(0, o);
-                      return `${r.substr(0, 1)},${r.substr(1)}${e}`;
+                    const e = n.toString();
+                    if ('/' !== t && n > 0 && !e.includes('.')) {
+                      const n = 'e' + (e.length - 1),
+                        t = 9 - n.length,
+                        o = e.substring(0, t);
+                      return `${o.substring(0, 1)},${o.substr(1)}${n}`;
                     }
-                    return n;
+                    const o = e.substring(0, 9);
+                    let r = +e.substring(9, 10);
+                    return e[10] >= 5 && (r += 1), `${o}${r}`;
                   })(A, C)),
                   (_ = A),
                   (w = 0),
@@ -585,11 +586,11 @@
         }),
       ],
     },
-    M = {
+    $ = {
       tag: 'section',
       className: ['calculator', 'calculator__light'],
       id: 'calculator',
       children: [v(j), v(N)],
     };
-  document.getElementById('body').appendChild(v(M));
+  document.getElementById('body').appendChild(v($));
 })();
